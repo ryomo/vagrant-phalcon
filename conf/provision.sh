@@ -7,6 +7,8 @@ apt-get upgrade -y
 
 # add-apt-repositories
 apt-get install -y software-properties-common
+# Warning: PHP5.5.9(Ubuntu's default) has some bugs affecting Phalcon routing.
+# That's why this repository is needed.
 add-apt-repository ppa:ondrej/php5
 apt-get update
 
@@ -27,7 +29,7 @@ a2enconf fqdn
 cp /vagrant/conf/apache.conf /etc/apache2/sites-available/myapache.conf
 a2ensite myapache.conf
 
-# PHP(php5.5.9 has a routing bug)
+# PHP
 apt-get install -y php5 php5-common php5-mcrypt curl php5-curl
 cp /vagrant/conf/php.ini /etc/php5/mods-available/myphp.ini
 php5enmod myphp

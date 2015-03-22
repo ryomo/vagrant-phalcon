@@ -16,15 +16,26 @@ git clone git@github.com:ryomo/vagrant_phalcon.git
 cd vagrant_phalcon/
 ```
 
-### 2. Change timezone and locale
-*Default timezone is `Asia/Tokyo`*
-
-To change timezone and locale, edit `provision.sh`'s `# timezone` section and `# locale` section.
-
-### 3. vagrant up
+### 2. vagrant up
 ```sh
 vagrant up
 ```
+
+### 3. Create Phalcon project
+```sh
+vagrant ssh
+```
+
+```sh
+cd /var/www/html/
+sudo phalcon project myproject
+```
+
+### 4. Access
+
+URL: [http://192.168.33.12/myproject/](http://192.168.33.12/myproject/)
+
+  or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
 
 
 ## Commands

@@ -1,7 +1,10 @@
 #!/bin/bash
 
 MYSQL_ROOT_PASS='pass'
+
+# Set $HOME.
 HOME=/home/vagrant
+cd ~
 
 apt-get update
 apt-get upgrade -y

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 MYSQL_ROOT_PASS='pass'
+HOME=/home/vagrant
 
 apt-get update
 apt-get upgrade -y
@@ -11,6 +12,9 @@ apt-get install -y software-properties-common
 # That's why this repository is needed.
 add-apt-repository ppa:ondrej/php5
 apt-get update
+
+# Ignore client locale settings.
+sed -i 's/AcceptEnv/#AcceptEnv/' /etc/ssh/sshd_config
 
 # tools
 apt-get install -y nano git-core
@@ -50,27 +54,29 @@ apt-get -y install phpmyadmin
 echo "\$cfg['LoginCookieValidity'] = 14400;" >> /etc/phpmyadmin/config.inc.php
 
 # Phalcon
-apt-get install -y php5-dev gcc libpcre3-dev
+apt-get install -y php5-dev gcc libpcre3-dev re2c
 git clone --depth=1 git://github.com/phalcon/cphalcon.git
-cd cphalcon/build/
+cd ~/cphalcon/build/
 ./install
-cd /home/vagrant
+cd ~
 rm -rf cphalcon/
 echo "extension=phalcon.so" > /etc/php5/mods-available/phalcon.ini
 php5enmod phalcon
 
-# Composer(global)
+# Composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# Phalcon DevTools(home)
+# Phalcon DevTools
 mkdir composer
-cd composer/
+cd ~/composer/
 composer require phalcon/devtools:dev-master
-cd /home/vagrant
+cd ~
 ln -s /home/vagrant/composer/vendor/phalcon/devtools/phalcon.php /usr/local/bin/phalcon
 
 # auto security update
 cp /usr/share/unattended-upgrades/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades
+
+apt-get autoremove -y
 
 service apache2 restart

@@ -8,6 +8,7 @@
     * Phalcon
     * Composer
     * Phalcon DevTools
+    * Codeception
 
 ## How to use
 ### 1. git clone
@@ -38,21 +39,20 @@ URL: [http://192.168.33.12/myproject/](http://192.168.33.12/myproject/)
   or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
 
 
-## Commands
-```sh
-vagrant ssh
-```
+## Available commands in `vagrant ssh`
 
+### phalcon
 ```sh
-$ phalcon
+$ sudo phalcon
 
 Phalcon DevTools (1.3.4)
 
 Available commands:~
 ```
 
+### composer
 ```sh
-$ composer
+$ sudo composer
    ______
   / ____/___  ____ ___  ____  ____  ________  _____
  / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
@@ -60,6 +60,15 @@ $ composer
 \____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
                     /_/
 Composer version 1.0-dev (829199c0530ea131262c804924f921447c71d4e8) 2015-03-16 13:11:02
+
+Usage:~
+```
+
+### codecept
+```sh
+$ sudo codecept
+
+Codeception version 2.0.11
 
 Usage:~
 ```

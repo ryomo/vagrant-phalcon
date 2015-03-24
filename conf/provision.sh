@@ -66,13 +66,18 @@ php5enmod phalcon
 # Composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
-
-# Phalcon DevTools
 mkdir composer
 cd ~/composer/
+
+# Phalcon DevTools
 composer require phalcon/devtools:dev-master
-cd ~
 ln -s /home/vagrant/composer/vendor/phalcon/devtools/phalcon.php /usr/local/bin/phalcon
+
+# Codeception
+composer require codeception/codeception
+ln -s /home/vagrant/composer/vendor/bin/codecept /usr/local/bin/codecept
+
+cd ~
 
 # auto security update
 cp /usr/share/unattended-upgrades/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades

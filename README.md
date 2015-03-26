@@ -6,6 +6,7 @@
         * root password is `pass`.
     * phpMyAdmin
     * Phalcon
+    * Zephir
     * Composer
     * Phalcon DevTools
     * Codeception
@@ -48,6 +49,22 @@ $ sudo phalcon
 Phalcon DevTools (1.3.4)
 
 Available commands:~
+```
+
+### zephir
+```sh
+$ zephir
+
+ _____              __    _
+/__  /  ___  ____  / /_  (_)____
+  / /  / _ \/ __ \/ __ \/ / ___/
+ / /__/  __/ /_/ / / / / / /
+/____/\___/ .___/_/ /_/_/_/
+         /_/
+
+Zephir version 0.6.0a
+
+Usage:~
 ```
 
 ### composer

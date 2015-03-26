@@ -66,6 +66,13 @@ rm -rf cphalcon/
 echo "extension=phalcon.so" > /etc/php5/mods-available/phalcon.ini
 php5enmod phalcon
 
+# Zephir
+git clone https://github.com/phalcon/zephir
+cd zephir
+./install-json
+./install -c
+cd ~
+
 # Composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer

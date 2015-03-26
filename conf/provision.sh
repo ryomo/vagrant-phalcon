@@ -63,7 +63,7 @@ cd ~/cphalcon/build/
 ./install
 cd ~
 rm -rf cphalcon/
-echo "extension=phalcon.so" > /etc/php5/mods-available/phalcon.ini
+echo 'extension=phalcon.so' > /etc/php5/mods-available/phalcon.ini
 php5enmod phalcon
 
 # Zephir
@@ -76,21 +76,19 @@ cd ~
 # Composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
-mkdir composer
-cd ~/composer/
+echo 'PATH="$HOME/.composer/vendor/bin:$PATH"' >> .profile
 
 # Phalcon DevTools
-composer require phalcon/devtools:dev-master
-ln -s /home/vagrant/composer/vendor/phalcon/devtools/phalcon.php /usr/local/bin/phalcon
+composer global require phalcon/devtools:dev-master
+ln -s /home/vagrant/.composer/vendor/bin/phalcon.php /home/vagrant/.composer/vendor/bin/phalcon
 
 # Codeception
-composer require codeception/codeception
-ln -s /home/vagrant/composer/vendor/bin/codecept /usr/local/bin/codecept
-
-cd ~
+composer global require codeception/codeception
 
 # auto security update
 cp /usr/share/unattended-upgrades/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades
+
+chown -R vagrant:vagrant $HOME
 
 apt-get autoremove -y
 

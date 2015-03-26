@@ -73,7 +73,7 @@ cd zephir
 ./install -c
 cd ~
 
-# Composer
+# Composer(global)
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 echo 'PATH="$HOME/.composer/vendor/bin:$PATH"' >> .profile

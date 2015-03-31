@@ -1,43 +1,43 @@
 ## Summary
-* Installs
-    * Apache
-        * SSL enabled.
-    * MySQL
-        * root password is `pass`.
-    * phpMyAdmin
-    * Phalcon
-    * Zephir
-    * Composer
-    * Phalcon DevTools
-    * Codeception
+### OS
+Ubuntu 14.04(LTS)
 
-## How to use
-### 1. git clone
+### Installed Apps
+* Apache
+    * SSL enabled.
+* MySQL
+    * root password is `pass`.
+* phpMyAdmin
+* Phalcon
+* Zephir
+* Composer
+* Phalcon DevTools
+* Codeception
+
+
+## How to use this Vagrantfile
 ```sh
-git clone git@github.com:ryomo/vagrant_phalcon.git
-cd vagrant_phalcon/
+$ git clone git@github.com:ryomo/vagrant_phalcon.git
+$ cd vagrant_phalcon/
+$ vagrant up
+$ vagrant ssh
+$ cd /var/www/html/
+$ sudo phalcon project myproject
 ```
 
-### 2. vagrant up
-```sh
-vagrant up
-```
-
-### 3. Create Phalcon project
-```sh
-vagrant ssh
-```
-
-```sh
-cd /var/www/html/
-sudo phalcon project myproject
-```
-
-### 4. Access
-
+### Access
 URL: [http://192.168.33.12/myproject/](http://192.168.33.12/myproject/)
 
-  or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
+or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
+
+
+## How to make your own Vagrant Box based on this
+*No need to clone this repository*
+
+1. `$ vagrant init`
+2. Edit Vagrantfile
+    * `config.vm.box = "ryomo/phalcon"`
+3. `$ vagrant up`
 
 
 ## Available commands in `vagrant ssh`

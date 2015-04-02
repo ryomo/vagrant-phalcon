@@ -77,6 +77,8 @@ cd ~
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 echo 'PATH="$HOME/.composer/vendor/bin:$PATH"' >> .profile
+echo 'Defaults !secure_path' > /etc/sudoers.d/00-keep-env-path
+echo 'Defaults env_keep+="PATH"' >> /etc/sudoers.d/00-keep-env-path
 
 # Phalcon DevTools
 composer global require phalcon/devtools:dev-master

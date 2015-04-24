@@ -35,8 +35,29 @@ or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
 *No need to clone this repository*
 
 1. `$ vagrant init`
-2. Edit Vagrantfile
-    * `config.vm.box = "ryomo/phalcon"`
+2. Edit Vagrantfile like below
+
+```rb
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = '2'
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.provider 'virtualbox' do |v|
+    v.memory = 1536
+    v.cpus = 2
+  end
+  config.vm.box = 'ryomo/phalcon'
+  config.vm.synced_folder 'html', '/var/www/html', create: true,
+    owner: 'www-data',
+    group: 'www-data',
+    mount_options: ['dmode=775,fmode=664']
+  config.vm.network :private_network, ip: '192.168.33.12'
+end
+```
+
 3. `$ vagrant up`
 
 
@@ -46,7 +67,7 @@ or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
 ```sh
 $ sudo phalcon
 
-Phalcon DevTools (1.3.4)
+Phalcon DevTools (2.0.0)
 
 Available commands:~
 ```

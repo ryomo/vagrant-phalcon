@@ -20,22 +20,15 @@ Ubuntu 14.04(LTS)
 $ git clone git@github.com:ryomo/vagrant_phalcon.git
 $ cd vagrant_phalcon/
 $ vagrant up
-$ vagrant ssh
-$ cd /var/www/html/
-$ sudo phalcon project myproject
 ```
 
-### Access
-URL: [http://192.168.33.12/myproject/](http://192.168.33.12/myproject/)
 
-or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
-
-
-## How to make your own Vagrant Box based on this
+## How to use Vagrant Box based on this
 *No need to clone this repository*
 
-1. `$ vagrant init`
+1. `$ vagrant init ryomo/phalcon`
 2. Edit Vagrantfile like below
+3. `$ vagrant up`
 
 ```rb
 # -*- mode: ruby -*-
@@ -58,7 +51,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 ```
 
-3. `$ vagrant up`
+
+## Access
+```sh
+$ vagrant ssh
+$ cd /var/www/html/
+$ sudo phalcon project myproject
+```
+
+URL: [http://192.168.33.12/myproject/](http://192.168.33.12/myproject/)
+
+or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
 
 
 ## Available commands in `vagrant ssh`

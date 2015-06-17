@@ -1,4 +1,7 @@
 /.vagrant
 /package.box
 /html
+*.sublime-project
+*.sublime-workspace
 !.gitkeep
+

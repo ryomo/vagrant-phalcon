@@ -13,6 +13,8 @@ Ubuntu 14.04(LTS)
 * Composer
 * Phalcon DevTools
 * Codeception
+* Memcached
+    * If you want to use memcached, you should not use `Phalcon\Cache\Backend\Memcache`, but should use `Phalcon\Cache\Backend\Libmemcached`.
 
 
 ## How to use this Vagrantfile

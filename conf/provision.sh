@@ -56,7 +56,7 @@ debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password"
 apt-get -y install phpmyadmin
 echo "\$cfg['LoginCookieValidity'] = 14400;" >> /etc/phpmyadmin/config.inc.php
 
-# memcache
+# memcached
 apt-get -y install php5-memcached memcached
 
 # Phalcon

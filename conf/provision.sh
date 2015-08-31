@@ -1,5 +1,6 @@
 #!/bin/bash
 
+PHALCON_BRANCH='2.0.x'
 MYSQL_ROOT_PASS='pass'
 
 # Set $HOME.
@@ -61,7 +62,7 @@ apt-get -y install php5-memcached memcached
 
 # Phalcon
 apt-get install -y php5-dev gcc libpcre3-dev re2c
-git clone --depth=1 git://github.com/phalcon/cphalcon.git
+git clone -b $PHALCON_BRANCH --depth=1 git://github.com/phalcon/cphalcon.git
 cd ~/cphalcon/build/
 ./install
 cd ~

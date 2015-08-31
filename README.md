@@ -8,7 +8,7 @@ Ubuntu 14.04(LTS)
 * MySQL
     * root password is `pass`.
 * phpMyAdmin
-* Phalcon 2.0.0
+* Phalcon 2.0.x
 * Zephir
 * Composer
 * Phalcon DevTools

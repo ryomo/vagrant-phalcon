@@ -51,6 +51,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     owner: 'www-data',
     group: 'www-data',
     mount_options: ['dmode=775,fmode=664']
+  config.vm.network :forwarded_port, guest: 8080, host: 8081
   config.vm.network :private_network, ip: '192.168.33.12'
 end
 ```

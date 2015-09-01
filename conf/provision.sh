@@ -10,11 +10,15 @@ cd ~
 apt-get update
 apt-get upgrade -y
 
-# add-apt-repositories
+# Add repositories
 apt-get install -y software-properties-common
+# PHP5.5.x repository
 # Warning: PHP5.5.9(Ubuntu's default) has some bugs affecting Phalcon routing.
 # That's why this repository is needed.
 add-apt-repository ppa:ondrej/php5
+# Jenkins repository
+wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
+echo 'deb http://pkg.jenkins-ci.org/debian binary/' > /etc/apt/sources.list.d/jenkins.list
 apt-get update
 
 # Ignore client locale settings.
@@ -59,6 +63,11 @@ echo "\$cfg['LoginCookieValidity'] = 14400;" >> /etc/phpmyadmin/config.inc.php
 
 # memcached
 apt-get -y install php5-memcached memcached
+
+# Jenkins
+apt-get install -y jenkins
+# Enable sudo in Jenkins
+echo 'jenkins ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/jenkins
 
 # Phalcon
 apt-get install -y php5-dev gcc libpcre3-dev re2c

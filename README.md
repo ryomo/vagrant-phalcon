@@ -15,6 +15,8 @@ Ubuntu 14.04(LTS)
 * Codeception
 * Memcached
     * If you want to use memcached, you should not use `Phalcon\Cache\Backend\Memcache`, but should use `Phalcon\Cache\Backend\Libmemcached`.
+* Jenkins
+    * [http://localhost:8081](http://localhost:8081) or [http://192.168.33.12:8080](http://192.168.33.12:8080)
 
 
 ## How to use this Vagrantfile
@@ -72,7 +74,7 @@ or [https://192.168.33.12/myproject/](https://192.168.33.12/myproject/)
 ```sh
 $ sudo phalcon
 
-Phalcon DevTools (2.0.0)
+Phalcon DevTools (2.0.7)
 
 Available commands:~
 ```
@@ -88,7 +90,7 @@ $ zephir
 /____/\___/ .___/_/ /_/_/_/
          /_/
 
-Zephir version 0.6.0a
+Zephir version 0.7.1b
 
 Usage:~
 ```
@@ -102,7 +104,7 @@ $ sudo composer
 / /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
 \____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
                     /_/
-Composer version 1.0-dev (829199c0530ea131262c804924f921447c71d4e8) 2015-03-16 13:11:02
+Composer version 1.0-dev (afd98b74f13b9def1b2447f16fd0bfd4d96dff94) 2015-08-31 09:58:50
 
 Usage:~
 ```
@@ -111,7 +113,7 @@ Usage:~
 ```sh
 $ sudo codecept
 
-Codeception version 2.0.11
+Codeception version 2.1.2
 
 Usage:~
 ```

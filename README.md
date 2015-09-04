@@ -7,6 +7,7 @@ Ubuntu 14.04(LTS)
     * SSL enabled.
 * MySQL
     * root password is `pass`.
+* PHP 5.6
 * phpMyAdmin
 * Phalcon 2.0.x
 * Zephir

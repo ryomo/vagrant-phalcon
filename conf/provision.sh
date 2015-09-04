@@ -12,10 +12,8 @@ apt-get upgrade -y
 
 # Add repositories
 apt-get install -y software-properties-common
-# PHP5.5.x repository
-# Warning: PHP5.5.9(Ubuntu's default) has some bugs affecting Phalcon routing.
-# That's why this repository is needed.
-add-apt-repository ppa:ondrej/php5
+# PHP5.6.x repository
+add-apt-repository ppa:ondrej/php5-5.6
 # Jenkins repository
 wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 echo 'deb http://pkg.jenkins-ci.org/debian binary/' > /etc/apt/sources.list.d/jenkins.list

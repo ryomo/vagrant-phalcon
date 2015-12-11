@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PHALCON_BRANCH='2.0.x'
+PHALCON_BRANCH='2.1.x'
 MYSQL_ROOT_PASS='pass'
 
 # Set $HOME.

@@ -40,7 +40,7 @@ cp /vagrant/conf/apache.conf /etc/apache2/sites-available/myapache.conf
 a2ensite myapache.conf
 
 # PHP
-apt-get install -y php5 php5-common php5-mcrypt curl php5-curl
+apt-get install -y php5 php5-common php5-mcrypt curl php5-curl php5-xdebug
 cp /vagrant/conf/php.ini /etc/php5/mods-available/myphp.ini
 php5enmod myphp
 

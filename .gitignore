@@ -1,8 +1,9 @@
+/.idea
 /.vagrant
 /package.box
 /cphalcon
 /html
 *.sublime-project
 *.sublime-workspace
+*.iml
 !.gitkeep
-

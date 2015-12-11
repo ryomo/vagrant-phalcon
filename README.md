@@ -9,7 +9,7 @@ Ubuntu 14.04(LTS)
     * root password is `pass`.
 * PHP 5.6
 * phpMyAdmin
-* Phalcon 2.0.x
+* Phalcon 2.1.x
 * Zephir
 * Composer
 * Phalcon DevTools
@@ -18,6 +18,7 @@ Ubuntu 14.04(LTS)
     * If you want to use memcached, you should not use `Phalcon\Cache\Backend\Memcache`, but should use `Phalcon\Cache\Backend\Libmemcached`.
 * Jenkins
     * [http://localhost:8081](http://localhost:8081) or [http://192.168.33.12:8080](http://192.168.33.12:8080)
+* Xdebug
 
 
 ## How to use this Vagrantfile

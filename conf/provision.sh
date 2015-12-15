@@ -50,7 +50,7 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 apt-get install -y mysql-server php5-mysqlnd
 cp /vagrant/conf/mysql.cnf /etc/mysql/conf.d/mysql.cnf
 service mysql restart
-mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -ppass mysql
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p${MYSQL_ROOT_PASS} mysql
 
 # phpMyAdmin
 debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"

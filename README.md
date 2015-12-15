@@ -19,6 +19,8 @@ Ubuntu 14.04(LTS)
 * Jenkins
     * [http://localhost:8081](http://localhost:8081) or [http://192.168.33.12:8080](http://192.168.33.12:8080)
 * Xdebug
+    * Xdebug is disabled by default for performance reason.
+    * To enable Xdebug, run `sudo php5enmod xdebug` in `vagrant ssh`.
 
 
 ## How to use this Vagrantfile

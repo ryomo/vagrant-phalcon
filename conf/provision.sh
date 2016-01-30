@@ -48,7 +48,7 @@ php5dismod xdebug
 # MySQL
 debconf-set-selections <<< "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASS"
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASS"
-apt-get install -y mysql-server php5-mysqlnd
+apt-get install -y mariadb-server php5-mysqlnd
 cp /vagrant/conf/mysql.cnf /etc/mysql/conf.d/mysql.cnf
 service mysql restart
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p${MYSQL_ROOT_PASS} mysql

@@ -5,7 +5,7 @@ Ubuntu 14.04(LTS)
 ### Installed Apps
 * Apache
     * SSL enabled.
-* MySQL
+* MariaDB
     * root password is `pass`.
 * PHP 5.6
 * phpMyAdmin

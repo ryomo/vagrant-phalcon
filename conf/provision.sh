@@ -30,6 +30,7 @@ apt-get install -y apache2
 mv /var/www/html/index.html /var/www/html/index.html_backup
 
 # apache settings
+a2enmod expires
 a2enmod rewrite
 a2enmod ssl
 a2ensite default-ssl

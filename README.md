@@ -10,6 +10,7 @@ Ubuntu 14.04(LTS)
 * PHP 5.6
 * phpMyAdmin
 * Phalcon 2.1.x **BETA**
+    * If you want to use the stable version, change `PHALCON_BRANCH='2.1.x'` to `2.0.x` in `conf/provision.sh`.
 * Zephir
 * Composer
 * Phalcon DevTools

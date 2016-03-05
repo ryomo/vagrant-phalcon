@@ -9,7 +9,7 @@ Ubuntu 14.04(LTS)
     * root password is `pass`.
 * PHP 5.6
 * phpMyAdmin
-* Phalcon 2.1.x
+* Phalcon 2.1.x **BETA**
 * Zephir
 * Composer
 * Phalcon DevTools

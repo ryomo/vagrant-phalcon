@@ -26,8 +26,8 @@ Ubuntu 14.04(LTS)
 
 ## How to use this Vagrantfile
 ```sh
-$ git clone git@github.com:ryomo/vagrant_phalcon.git
-$ cd vagrant_phalcon/
+$ git clone git@github.com:ryomo/vagrant-phalcon.git
+$ cd vagrant-phalcon/
 $ vagrant up
 ```
 

@@ -1,4 +1,7 @@
 ## Summary
+
+*Newer version available at [ryomo/vagrant-phalcon3-php7](https://github.com/ryomo/vagrant-phalcon3-php7)*
+
 ### OS
 Ubuntu 14.04(LTS)
 

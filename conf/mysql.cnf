@@ -4,3 +4,6 @@ character-set-server = utf8mb4
 log_slow_queries = /var/log/mysql/mysql-slow.log
 long_query_time = 1
 log-queries-not-using-indexes
+
+[client]
+default-character-set = utf8mb4
